@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="it" data-lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Rispondi a poche domande sulla tua idea e ricevi una stima di costi, fattibilità e tempi per produrre il tuo capo in Italia, in extra Europa o in Asia.">
+  <meta name="theme-color" content="#f3ede3">
+  <title>Il tuo capo si può fare? — UnSecret</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..700&family=Inter:wght@300..700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="grain" aria-hidden="true"></div>
+
+  <header class="site-header">
+    <a class="brand" href="#" id="brandLink">
+      <span class="brand-mark">U</span>
+      <span class="brand-name">UnSecret</span>
+      <span class="brand-divider"></span>
+      <span class="brand-tag" data-i18n="brand.tag">feasibility studio</span>
+    </a>
+    <div class="header-right">
+      <p class="header-meta" data-i18n="header.meta">Stima indicativa · Italia / Extra Europa / Asia</p>
+      <div class="language-picker">
+        <label class="visually-hidden" for="langSelect" data-i18n="lang.label">Scegli la lingua</label>
+        <select id="langSelect">
+          <option value="it" data-i18n-opt="lang.it">Italiano</option>
+          <option value="en" data-i18n-opt="lang.en">English</option>
+          <option value="fr" data-i18n-opt="lang.fr">Français</option>
+          <option value="zh" data-i18n-opt="lang.zh">中文（简体）</option>
+          <option value="es" data-i18n-opt="lang.es">Español</option>
+        </select>
+        <span class="lang-chevron" aria-hidden="true">⌄</span>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- INTRO -->
+    <section class="intro" id="intro">
+      <div class="intro-copy">
+        <p class="eyebrow"><span class="eyebrow-dot"></span><span data-i18n="intro.eyebrow">Analisi di fattibilità per il tuo capo</span></p>
+        <h1><span data-i18n="intro.title1">Il tuo capo</span><br><em><span data-i18n="intro.title2">si può fare?</span></em></h1>
+        <p class="lede" data-i18n="intro.lede">Rispondi a poche domande sulla tua idea: ricevi una stima di costi, fattibilità e tempi per produrla in Italia, in extra Europa o in Asia.</p>
+        <div class="intro-cta">
+          <button class="btn btn-primary" id="startBtn" type="button">
+            <span data-i18n="intro.cta">Inizia l'analisi</span>
+            <span class="btn-arrow" aria-hidden="true">→</span>
+          </button>
+          <span class="cta-note" data-i18n="intro.note">Nessun preventivo richiesto</span>
+        </div>
+        <ul class="intro-facts">
+          <li><strong>3</strong><span data-i18n="intro.fact1">passaggi</span></li>
+          <li><strong>2 min</strong><span data-i18n="intro.fact2">per completarla</span></li>
+          <li><strong>0 €</strong><span data-i18n="intro.fact3">per iniziare</span></li>
+        </ul>
+      </div>
+
+      <div class="intro-visual" aria-hidden="true">
+        <svg class="technical-drawing" viewBox="0 0 560 640" role="img" aria-label="Disegno tecnico di un capo">
+          <defs>
+            <pattern id="grid" width="28" height="28" patternUnits="userSpaceOnUse">
+              <path d="M28 0H0V28" fill="none" stroke="#1e1c19" stroke-width=".6" opacity=".16"/>
+            </pattern>
+            <marker id="arrow" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+              <path d="M0 0 10 5 0 10z" fill="#1e1c19"/>
+            </marker>
+          </defs>
+
+          <circle cx="292" cy="306" r="238" fill="#dccbb6" opacity=".72"/>
+          <circle cx="292" cy="306" r="247" fill="none" stroke="#1e1c19" stroke-width="1" opacity=".18" stroke-dasharray="2 7"/>
+          <rect x="92" y="94" width="400" height="430" fill="url(#grid)"/>
+          <rect x="92" y="94" width="400" height="430" fill="#fbf7f0" opacity=".18"/>
+
+          <g fill="none" stroke="#1e1c19" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round">
+            <!-- body -->
+            <path d="M252 134 C262 156 302 156 312 134 L372 150 L424 306 L392 336 L356 252 L350 502 L214 502 L208 252 L172 336 L140 306 L192 150 Z"/>
+            <!-- neckline -->
+            <path d="M252 134 C262 156 302 156 312 134"/>
+            <!-- center front -->
+            <path d="M282 152 L282 502" stroke-dasharray="4 5" stroke-width="1.1"/>
+            <!-- lapels -->
+            <path d="M252 134 L282 206 L312 134"/>
+            <path d="M252 134 L266 198 L282 206"/>
+            <path d="M312 134 L298 198 L282 206"/>
+            <!-- sleeves -->
+            <path d="M192 150 L218 260" stroke-dasharray="4 5" stroke-width="1.1"/>
+            <path d="M372 150 L346 260" stroke-dasharray="4 5" stroke-width="1.1"/>
+            <!-- pockets -->
+            <path d="M228 392 L268 392 L264 430 L232 430 Z" stroke-width="1.3"/>
+            <path d="M296 392 L336 392 L332 430 L300 430 Z" stroke-width="1.3"/>
+            <!-- buttons -->
+            <circle cx="282" cy="250" r="2.6" fill="#1e1c19" stroke="none"/>
+            <circle cx="282" cy="306" r="2.6" fill="#1e1c19" stroke="none"/>
+            <circle cx="282" cy="362" r="2.6" fill="#1e1c19" stroke="none"/>
+            <circle cx="282" cy="418" r="2.6" fill="#1e1c19" stroke="none"/>
+            <circle cx="282" cy="474" r="2.6" fill="#1e1c19" stroke="none"/>
+          </g>
+
+          <!-- measurements -->
+          <g stroke="#1e1c19" stroke-width="1" opacity=".6">
+            <path d="M208 520 H350" marker-start="url(#arrow)" marker-end="url(#arrow)"/>
+            <path d="M370 150 V502" stroke-dasharray="3 5"/>
+            <path d="M370 150 H384" marker-end="url(#arrow)"/>
+            <path d="M370 502 H384" marker-end="url(#arrow)"/>
+          </g>
+          <g font-family="Inter, sans-serif" font-size="10" letter-spacing="1.4" fill="#1e1c19" opacity=".72">
+            <text x="279" y="538" text-anchor="middle">58 CM</text>
+            <text x="398" y="330" transform="rotate(90 398 330)" text-anchor="middle">LUNGHEZZA</text>
+          </g>
+
+          <!-- annotations -->
+          <g font-family="Inter, sans-serif" fill="#1e1c19">
+            <text x="92" y="72" font-size="10" letter-spacing="2.6" opacity=".55">CAPO / 01</text>
+            <text x="492" y="72" text-anchor="end" font-size="10" letter-spacing="2.6" opacity=".55">STUDIO DI FATTIBILITÀ</text>
+            <text x="92" y="566" font-size="11" letter-spacing="1.8" opacity=".75">TESSUTO · COTONE</text>
+            <text x="92" y="586" font-size="11" letter-spacing="1.8" opacity=".75">COSTRUZIONE · MEDIA</text>
+          </g>
+
+          <!-- price tag -->
+          <g transform="translate(360 96) rotate(7)">
+            <rect width="130" height="58" rx="4" fill="#1e1c19"/>
+            <text x="14" y="23" font-family="Inter, sans-serif" font-size="9" letter-spacing="2" fill="#f3ede3" opacity=".7">STIMA / PEZZO</text>
+            <text x="14" y="45" font-family="Fraunces, Georgia, serif" font-size="22" fill="#f3ede3">€ 18–22</text>
+          </g>
+
+          <!-- swatches -->
+          <g transform="translate(94 470)">
+            <rect width="46" height="46" rx="23" fill="#b45136"/>
+            <rect x="34" width="46" height="46" rx="23" fill="#69765b"/>
+            <rect x="68" width="46" height="46" rx="23" fill="#1e1c19"/>
+          </g>
+
+          <!-- stamp -->
+          <g transform="translate(446 552) rotate(-13)" opacity=".85">
+            <circle r="52" fill="none" stroke="#b45136" stroke-width="1.3"/>
+            <circle r="45" fill="none" stroke="#b45136" stroke-width=".8" stroke-dasharray="2 4"/>
+            <text text-anchor="middle" y="-6" font-family="Inter, sans-serif" font-size="9" letter-spacing="2.4" fill="#b45136">STIMA</text>
+            <text text-anchor="middle" y="9" font-family="Inter, sans-serif" font-size="9" letter-spacing="2.4" fill="#b45136">INDICATIVA</text>
+            <text text-anchor="middle" y="25" font-family="Inter, sans-serif" font-size="7" letter-spacing="1.6" fill="#b45136">2026</text>
+          </g>
+        </svg>
+      </div>
+    </section>
+
+    <!-- WIZARD -->
+    <section class="wizard" id="wizard" hidden>
+      <div class="wizard-shell">
+        <aside class="wizard-side">
+          <p class="eyebrow" data-i18n="wizard.side.eyebrow">La tua analisi</p>
+          <ol class="steps" id="stepsList">
+            <li class="active" data-indicator="1">
+              <span class="step-num">01</span>
+              <span class="step-text"><strong data-i18n="step1.title">La tua idea</strong><small data-i18n="step1.sub">Prodotto e destinatario</small></span>
+            </li>
+            <li data-indicator="2">
+              <span class="step-num">02</span>
+              <span class="step-text"><strong data-i18n="step2.title">Materiali</strong><small data-i18n="step2.sub">Tessuto e complessità</small></span>
+            </li>
+            <li data-indicator="3">
+              <span class="step-num">03</span>
+              <span class="step-text"><strong data-i18n="step3.title">Numeri</strong><small data-i18n="step3.sub">Quantità, budget, prezzo</small></span>
+            </li>
+          </ol>
+
+          <div class="side-note">
+            <span class="side-note-mark" aria-hidden="true">“</span>
+            <p data-i18n="wizard.side.note">Le stime si basano su range di mercato indicativi. Servono a capire se l'idea sta in piedi, non a sostituire un preventivo.</p>
+          </div>
+        </aside>
+
+        <form class="wizard-card" id="wizardForm" novalidate>
+          <!-- STEP 1 -->
+          <div class="step-panel" data-panel="1">
+            <div class="step-head">
+              <span class="step-kicker" data-i18n="step1.kicker">01 — La tua idea</span>
+              <h2 data-i18n="step1.heading">Che cosa vuoi realizzare?</h2>
+              <p data-i18n="step1.desc">Partiamo dal capo. Queste informazioni cambiano molto il costo di produzione.</p>
+            </div>
+
+            <fieldset class="field" data-field="product">
+              <legend data-i18n="field.product.legend">Tipo di prodotto</legend>
+              <div class="option-grid products">
+                <label class="option">
+                  <input type="radio" name="product" value="tshirt">
+                  <span class="option-body"><span class="option-title" data-i18n="product.tshirt.title">T-shirt</span><span class="option-hint" data-i18n="product.tshirt.hint">Basic o grafica</span></span>
+                </label>
+                <label class="option">
+                  <input type="radio" name="product" value="camicia">
+                  <span class="option-body"><span class="option-title" data-i18n="product.camicia.title">Camicia</span><span class="option-hint" data-i18n="product.camicia.hint">Classica o oversize</span></span>
+                </label>
+                <label class="option">
+                  <input type="radio" name="product" value="felpa">
+                  <span class="option-body"><span class="option-title" data-i18n="product.felpa.title">Felpa</span><span class="option-hint" data-i18n="product.felpa.hint">Hoodie o crewneck</span></span>
+                </label>
+                <label class="option">
+                  <input type="radio" name="product" value="pantalone">
+                  <span class="option-body"><span class="option-title" data-i18n="product.pantalone.title">Pantalone</span><span class="option-hint" data-i18n="product.pantalone.hint">Chino, jeans, sartoriale</span></span>
+                </label>
+                <label class="option">
+                  <input type="radio" name="product" value="abito">
+                  <span class="option-body"><span class="option-title" data-i18n="product.abito.title">Abito</span><span class="option-hint" data-i18n="product.abito.hint">Daywear o sera</span></span>
+                </label>
+                <label class="option">
+                  <input type="radio" name="product" value="giacca">
+                  <span class="option-body"><span class="option-title" data-i18n="product.giacca.title">Giacca</span><span class="option-hint" data-i18n="product.giacca.hint">Blazer o outerwear</span></span>
+                </label>
+                <label class="option">
+                  <input type="radio" name="product" value="maglieria">
+                  <span class="option-body"><span class="option-title" data-i18n="product.maglieria.title">Maglieria</span><span class="option-hint" data-i18n="product.maglieria.hint">Knitwear e jersey</span></span>
+                </label>
+                <label class="option">
+                  <input type="radio" name="product" value="intimo">
+                  <span class="option-body"><span class="option-title" data-i18n="product.intimo.title">Intimo</span><span class="option-hint" data-i18n="product.intimo.hint">Basic o lingerie</span></span>
+                </label>
+                <label class="option">
+                  <input type="radio" name="product" value="accessorio">
+                  <span class="option-body"><span class="option-title" data-i18n="product.accessorio.title">Accessorio</span><span class="option-hint" data-i18n="product.accessorio.hint">Borsa, cappello, ecc.</span></span>
+                </label>
+              </div>
+              <p class="field-error" data-error="product" role="alert"></p>
+            </fieldset>
+
+            <div class="field-row">
+              <fieldset class="field" data-field="audience">
+                <legend data-i18n="field.audience.legend">Per chi</legend>
+                <div class="segment">
+                  <label><input type="radio" name="audience" value="donna"><span data-i18n="audience.donna">Donna</span></label>
+                  <label><input type="radio" name="audience" value="uomo"><span data-i18n="audience.uomo">Uomo</span></label>
+                  <label><input type="radio" name="audience" value="unisex"><span data-i18n="audience.unisex">Unisex</span></label>
+                  <label><input type="radio" name="audience" value="bambino"><span data-i18n="audience.bambino">Bambino</span></label>
+                </div>
+                <p class="field-error" data-error="audience" role="alert"></p>
+              </fieldset>
+
+              <div class="field" data-field="stage">
+                <label for="stage" data-i18n="field.stage.label">A che punto sei</label>
+                <div class="select-wrap">
+                  <select id="stage" name="stage">
+                    <option value="" data-i18n-opt="field.stage.placeholder">Scegli una fase</option>
+                    <option value="idea" data-i18n-opt="field.stage.idea">Ho solo un'idea</option>
+                    <option value="disegno" data-i18n-opt="field.stage.disegno">Ho un disegno tecnico</option>
+                    <option value="prototipo" data-i18n-opt="field.stage.prototipo">Ho un prototipo</option>
+                    <option value="campione" data-i18n-opt="field.stage.campione">Ho un campione approvato</option>
+                    <option value="produzione" data-i18n-opt="field.stage.produzione">Produzione già avviata</option>
+                  </select>
+                  <span class="select-chevron" aria-hidden="true">⌄</span>
+                </div>
+                <p class="field-error" data-error="stage" role="alert"></p>
+              </div>
+            </div>
+
+            <div class="field">
+              <label for="description"><span data-i18n="field.description.label">Descrivi l'idea</span> <span class="optional" data-i18n="field.description.optional">facoltativo</span></label>
+              <textarea id="description" name="description" maxlength="280" rows="3" placeholder="" data-i18n-placeholder="field.description.placeholder"></textarea>
+              <div class="char-count"><span id="charCount">0</span>/280</div>
+            </div>
+          </div>
+
+          <!-- STEP 2 -->
+          <div class="step-panel" data-panel="2" hidden>
+            <div class="step-head">
+              <span class="step-kicker" data-i18n="step2.kicker">02 — Materiali</span>
+              <h2 data-i18n="step2.heading">Il materiale incide molto sul costo.</h2>
+              <p data-i18n="step2.desc">Scegli il tessuto principale e il livello di lavorazione del modello.</p>
+            </div>
+
+            <fieldset class="field" data-field="material">
+              <legend data-i18n="field.material.legend">Tipo di materiale</legend>
+              <div class="option-grid materials">
+                <label class="option">
+                  <input type="radio" name="material" value="cotone">
+                  <span class="option-body"><span class="option-title" data-i18n="material.cotone.title">Cotone</span><span class="option-hint" data-i18n="material.cotone.hint">Il più versatile</span></span>
+                </label>
+                <label class="option">
+                  <input type="radio" name="material" value="lino">
+                  <span class="option-body"><span class="option-title" data-i18n="material.lino.title">Lino</span><span class="option-hint" data-i18n="material.lino.hint">Naturale, stagionale</span></span>
+                </label>
+                <label class="option">
+                  <input type="radio" name="material" value="lana">
+                  <span class="option-body"><span class="option-title" data-i18n="material.lana.title">Lana</span><span class="option-hint" data-i18n="material.lana.hint">Caldo, premium</span></span>
+                </label>
+                <label class="option">
+                  <input type="radio" name="material" value="seta">
+                  <span class="option-body"><span class="option-title" data-i18n="material.seta.title">Seta</span><span class="option-hint" data-i18n="material.seta.hint">Delicato, luxury</span></span>
+                </label>
+                <label class="option">
+                  <input type="radio" name="material" value="jersey">
+                  <span class="option-body"><span class="option-title" data-i18n="material.jersey.title">Jersey</span><span class="option-hint" data-i18n="material.jersey.hint">Elastico, comodo</span></span>
+                </label>
+                <label class="option">
+                  <input type="radio" name="material" value="denim">
+                  <span class="option-body"><span class="option-title" data-i18n="material.denim.title">Denim</span><span class="option-hint" data-i18n="material.denim.hint">Robusto, iconico</span></span>
+                </label>
+                <label class="option">
+                  <input type="radio" name="material" value="tecnico">
+                  <span class="option-body"><span class="option-title" data-i18n="material.tecnico.title">Tecnico</span><span class="option-hint" data-i18n="material.tecnico.hint">Performance</span></span>
+                </label>
+                <label class="option">
+                  <input type="radio" name="material" value="pelle">
+                  <span class="option-body"><span class="option-title" data-i18n="material.pelle.title">Pelle</span><span class="option-hint" data-i18n="material.pelle.hint">Concia e finitura</span></span>
+                </label>
+                <label class="option">
+                  <input type="radio" name="material" value="misto">
+                  <span class="option-body"><span class="option-title" data-i18n="material.misto.title">Misto</span><span class="option-hint" data-i18n="material.misto.hint">Fibre blend</span></span>
+                </label>
+              </div>
+              <p class="field-error" data-error="material" role="alert"></p>
+            </fieldset>
+
+            <label class="switch-row" for="recycled">
+              <span class="switch-copy">
+                <strong data-i18n="field.recycled.title">Usi elementi riciclati?</strong>
+                <small data-i18n="field.recycled.hint">Tessuti rigenerati, deadstock o certificati GRS.</small>
+              </span>
+              <input type="checkbox" id="recycled" name="recycled" class="switch-input">
+              <span class="switch-ui" aria-hidden="true"><span></span></span>
+            </label>
+
+            <fieldset class="field" data-field="complexity">
+              <legend data-i18n="field.complexity.legend">Complessità del modello</legend>
+              <div class="option-grid complexity">
+                <label class="option">
+                  <input type="radio" name="complexity" value="semplice">
+                  <span class="option-body">
+                    <span class="option-title" data-i18n="complexity.semplice.title">Semplice</span>
+                    <span class="option-hint" data-i18n="complexity.semplice.hint">Pochi pezzi, linee pulite, finiture basiche.</span>
+                  </span>
+                </label>
+                <label class="option">
+                  <input type="radio" name="complexity" value="media">
+                  <span class="option-body">
+                    <span class="option-title" data-i18n="complexity.media.title">Media</span>
+                    <span class="option-hint" data-i18n="complexity.media.hint">Volumi, tasche, dettagli e finiture curate.</span>
+                  </span>
+                </label>
+                <label class="option">
+                  <input type="radio" name="complexity" value="complessa">
+                  <span class="option-body">
+                    <span class="option-title" data-i18n="complexity.complessa.title">Complessa</span>
+                    <span class="option-hint" data-i18n="complexity.complessa.hint">Molti pezzi, fodere, strutture, lavorazioni speciali.</span>
+                  </span>
+                </label>
+              </div>
+              <p class="field-error" data-error="complexity" role="alert"></p>
+            </fieldset>
+          </div>
+
+          <!-- STEP 3 -->
+          <div class="step-panel" data-panel="3" hidden>
+            <div class="step-head">
+              <span class="step-kicker" data-i18n="step3.kicker">03 — Numeri</span>
+              <h2 data-i18n="step3.heading">Quantità, budget e prezzo.</h2>
+              <p data-i18n="step3.desc">Anche numeri approssimativi vanno bene: servono a capire la scala del progetto.</p>
+            </div>
+
+            <div class="field" data-field="quantity">
+              <label for="quantity" data-i18n="field.quantity.label">Pezzi da produrre</label>
+              <div class="number-wrap">
+                <input type="number" id="quantity" name="quantity" min="1" max="100000" step="1" value="200" inputmode="numeric">
+                <span data-i18n="field.quantity.unit">pezzi</span>
+              </div>
+              <input type="range" id="quantityRange" min="1" max="5000" step="10" value="200" aria-label="" data-i18n-aria="field.quantity.rangeAria">
+              <div class="range-labels"><span data-i18n="field.quantity.rangeMin">1</span><span data-i18n="field.quantity.rangeMax">5.000+</span></div>
+              <p class="field-error" data-error="quantity" role="alert"></p>
+            </div>
+
+            <div class="field-row">
+              <div class="field" data-field="budget">
+                <label for="budget" data-i18n="field.budget.label">Budget disponibile</label>
+                <div class="number-wrap money">
+                  <span class="prefix" data-i18n="currency.symbol">€</span>
+                  <input type="number" id="budget" name="budget" min="0" step="100" value="3000" inputmode="numeric" placeholder="0">
+                </div>
+                <p class="field-error" data-error="budget" role="alert"></p>
+              </div>
+
+              <div class="field" data-field="retail">
+                <label for="retail" data-i18n="field.retail.label">Prezzo di vendita al pubblico</label>
+                <div class="number-wrap money">
+                  <span class="prefix" data-i18n="currency.symbol">€</span>
+                  <input type="number" id="retail" name="retail" min="0" step="1" inputmode="numeric" placeholder="" data-i18n-placeholder="field.retail.placeholder">
+                </div>
+                <label class="checkline" for="noRetail">
+                  <input type="checkbox" id="noRetail" name="noRetail">
+                  <span data-i18n="field.retail.noRetail">Non ho ancora deciso il prezzo</span>
+                </label>
+                <p class="field-error" data-error="retail" role="alert"></p>
+              </div>
+            </div>
+
+            <div class="form-note">
+              <span class="form-note-icon" aria-hidden="true">i</span>
+              <p data-i18n="form.note">Le stime si basano su range di mercato indicativi e non sostituiscono un preventivo. I prezzi reali dipendono dal fornitore, dal tessuto scelto e dal momento.</p>
+            </div>
+          </div>
+
+          <div class="wizard-nav">
+            <button type="button" class="btn btn-ghost" id="backBtn" data-i18n="nav.back">← Indietro</button>
+            <div class="nav-right">
+              <span class="step-counter" id="stepCounter">Passo 1 di 3</span>
+              <button type="submit" class="btn btn-primary" id="nextBtn">
+                <span data-i18n="nav.continue">Continua</span> <span class="btn-arrow" aria-hidden="true">→</span>
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <!-- RESULTS -->
+    <section class="results" id="results" hidden>
+      <div class="results-head">
+        <div>
+          <p class="eyebrow"><span class="eyebrow-dot"></span><span data-i18n="results.eyebrow">La tua analisi</span></p>
+          <h2 data-i18n="results.heading">Ecco cosa abbiamo stimato.</h2>
+        </div>
+        <div class="results-actions">
+          <button class="btn btn-ghost" id="editBtn" type="button" data-i18n="results.edit">Modifica risposte</button>
+          <button class="btn btn-outline" id="printBtn" type="button" data-i18n="results.print">Stampa / PDF</button>
+        </div>
+      </div>
+
+      <div class="summary-chips" id="resultSummary"></div>
+      <div class="verdict-card" id="verdictCard"></div>
+
+      <div class="section-block">
+        <div class="block-head">
+          <h3 data-i18n="results.where.title">Dove produrlo</h3>
+          <p data-i18n="results.where.desc">Tre scenari a confronto. Seleziona una destinazione per vedere il dettaglio dei costi.</p>
+        </div>
+        <div class="loc-grid" id="locGrid"></div>
+      </div>
+
+      <div class="detail-grid">
+        <div class="panel" id="breakdownPanel"></div>
+        <div class="panel" id="economicsPanel"></div>
+      </div>
+
+      <div class="detail-grid">
+        <div class="panel" id="timelinePanel"></div>
+        <div class="panel" id="notesPanel"></div>
+      </div>
+
+      <div class="disclaimer">
+        <span class="disclaimer-mark" aria-hidden="true">!</span>
+        <p data-i18n-html="results.disclaimer"><strong>Le stime si basano su range di mercato indicativi</strong> e non sostituiscono un preventivo. I prezzi reali dipendono dal fornitore, dal tessuto scelto e dal momento.</p>
+      </div>
+
+      <div class="results-footer">
+        <button class="btn btn-outline" id="restartBtn" type="button" data-i18n="results.restart">Ricomincia</button>
+        <button class="btn btn-primary" id="editBtnBottom" type="button"><span data-i18n="results.editBottom">Modifica le risposte</span> <span class="btn-arrow" aria-hidden="true">→</span></button>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <span data-i18n="footer.brand">UnSecret — studio di fattibilità per l'abbigliamento</span>
+    <span data-i18n="footer.made">Made with care · Italia</span>
+  </footer>
+
+  <noscript>
+    <p class="noscript" data-i18n="noscript">Questa analisi ha bisogno di JavaScript per funzionare. Attivalo nel browser e ricarica la pagina.</p>
+  </noscript>
+
+  <!-- Richiesta email per stampa/PDF -->
+  <div class="email-modal" id="emailModal" hidden aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="emailModalTitle">
+    <div class="email-modal-backdrop" id="emailModalBackdrop"></div>
+    <div class="email-modal-card">
+      <h3 id="emailModalTitle" data-i18n="email.modal.title">Indirizzo email</h3>
+      <p data-i18n="email.modal.desc">Per stampare o salvare il PDF dell'analisi, inserisci un indirizzo email valido. Non verrà pubblicato né condiviso.</p>
+      <div class="field">
+        <label for="emailInput" data-i18n="email.label">Indirizzo email</label>
+        <input type="email" id="emailInput" name="email" placeholder="" data-i18n-placeholder="email.placeholder">
+        <p class="field-error" data-error="email" role="alert"></p>
+      </div>
+      <div class="email-modal-actions">
+        <button type="button" class="btn btn-ghost" id="emailCancelBtn" data-i18n="email.cancel">Annulla</button>
+        <button type="button" class="btn btn-primary" id="emailConfirmBtn" data-i18n="email.confirm">Conferma e stampa</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
